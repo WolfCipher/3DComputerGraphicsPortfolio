@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 2: Articulated Flying Thing and Radar</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix"><h2 id="articulated-flying-thing-quadcopter-propeller-plane--and-radar-dish">Articulated Flying Thing (Quadcopter, Propeller Plane, &hellip;) and Radar Dish</h2>
+<iframe
+    title="07-06-01"
+    src="../../for_students/07-06-01.html"
+    class="includebox includebox-standard"
+    width="100%"
+    height="100%"
+    scrolling="no"
+    frameborder="0"
+></iframe>
+
+<div width="500px" style="border: 1px solid black; padding: 10px; margin: 10px; border-radius:10px;background-color: #f0f0f0;">
+    <p>
+        I made quadcopter bugs (a bee and a fly) and radar dish flowers that follow the bugs around.
+        The big flower follows the bee, and the little flower follows the fly.
+    </p>
+    <p>
+        The bee flies in a circle, and the fly flies in a semicircle. They also differ in their propeller types.
+    </p>
+    <p>
+        The bee also has a yellow-and-black stripe texture that I made in the Paint app, and the fly's eyes use a texture that I found online as their normal map.
+    </p>
+    <p>
+        Attributions
+    </p>
+    <p>
+        Fly Eye Texture: https://pixabay.com/vectors/cube-hexagon-pattern-yellow-blue-4735155/ 
+    </p>
+</div>
+<p>Files: 
+    
+    <a href="../../for_students/07-06-01.js" class="for_students for_students--notfile">07-06-01.js</a> 
+     
+     <a href="../../for_students/07-06-01.html" class="for_students for_students--notfile">07-06-01.html</a></p>
+<h2 id="requirements">Requirements</h2>
+<p>There needs to be a flying &ldquo;articlated thing&rdquo; (a helicopter with a rotor, a quadcopter with rotors, a propeller plane) that flies around. There needs to be a &ldquo;radar dish&rdquo; (some object) that points at it on the ground.</p>
+<p>One object should fly in a circle. You can other objects that follow a more complex path. Have a &ldquo;radar dish&rdquo; for each flying thing. These ground objects need to &ldquo;look at&rdquo; the flying object.</p>
+<p>In the original assignment, students had to do this directly in THREE. You are allowed to use the class framework if you prefer.</p>
+
+
+<details class="myexpand" >
+    <summary class="myexpand-head">Instructions from Page 07-06</summary>
+    <div class="markdown-inner myexpand-content">
+      <p>You have made a quadcopter in 2D on a previous assignment. We&rsquo;ll do the same thing again, with a few twists.</p>
+<p><strong>Summary:</strong> Turn the flying donut into a quadcopter/aircraft (with spinning rotors/propellers).</p>
+<p>First, since this is 3D, we won&rsquo;t just see the vehicle from above, so you have a little more freedom in what you make. It needs to have multiple (spinning) propellers, but it could be a traditional helicopter (with a vertical rotor in the tail) or even a multi-engined propeller airplane.</p>
+<p>Second, in addition to the aircraft, you need to have a &ldquo;radar dish&rdquo; on the ground that always points towards the aircraft. This object should stay in the same place on the ground, but rotate so that it is always pointing towards the aircraft (tracking it). As the aircraft moves, the radar rotates. It doesn&rsquo;t have to be a radar dish (you can be creative - it could be a telescope that looks at the aircraft, or &hellip;), but it does have to have an obvious &ldquo;top&rdquo; that always points towards the aircraft.</p>
+<p>The goal of the assignment is to have you make a hierarchical object (aircraft with propellers) that flies around in 3D, and be able to point one object at the other. Other bells and whistles are nice (and can earn advanced points).</p>
+<p>Some requirements:</p>
+<ol>
+<li>The aircraft can be simple in shape, but it must have an obvious front that faces forward when flying.</li>
+<li>The propellers can be simple (a thin box can work), but they must have an obvious center that they spin around, and they must spin as the aircraft flies.</li>
+<li>Your scene must have a ground plane.</li>
+<li>Your scene must have at least one aircraft that flies in a circle. You can have the other aircraft fly in more complicated ways (see advanced points).</li>
+<li>You should have at least two aircraft flying. Both with spinning propellers. It is OK if the two are the same, but you get advanced points if they are different.</li>
+<li>For each aircraft there should be an object on the ground that tracks it (points toward it as it flies around). These can be radar dishes, but they can have a different shape as well. Whatever they are, it should be obvious which direction they are pointing and that they &ldquo;track&rdquo; the aircraft (they continually point towards it as the aircraft flies around).</li>
+</ol>
+<p><em>Note: it will be better to have one aircraft, with a functional radar dish, than two aircraft and no radar dish. Of course, it&rsquo;s best to have two of each. Once you make one, it shouldn&rsquo;t be too hard to add another.</em></p>
+<p>The starter code provides some lighting, a simple ground plane, and OrbitCamera controls. You are welcome to improve the lighting, and make the ground more interesting.</p>
+<p><strong>Try getting things to work with simple shapes first.</strong> It is better to have a simple helicopter made of blocks that has a block propeller that spins properly, than a fancy shaped thing that doesn&rsquo;t fly correctly.</p>
+<p><em>(optional)</em> You may load geometry from a file (using, for example THREE&rsquo;s <code>OBJLoader</code>). However, if you do this, you <strong>must</strong> describe in the text file below where the OBJ file comes from. If you do not create the file yourself, be sure to give proper attribution, and confirm that it comes from a source that allows you to use it (e.g., it has a Creative Commons license). Don&rsquo;t forget to add any geometry files to the repository. Please do not give big files, or things that use features we haven&rsquo;t discussed in class yet (like textures). You may only add object files (i.e., <code>.obj</code>). If you choose to load geometry from a file, look at the previous workbook for tips. You will have plenty of opportunity to use loaded objects in later workbooks.</p>
+<p>If you&rsquo;re curious how to make a radar dish, you can use the <a href="https://threejs.org/docs/#api/en/geometries/LatheGeometry" target="_blank">lathe</a> example. Or you can make it some other way. A cone would work at a minimum. It is more important that the object has the right behavior (it clearly points toward an aircraft). A hint: <code>lookAt</code> is your friend.</p>
+<p>We&rsquo;ve given you some code to start - a basic ground plane, a camera, some lights, even a simple animation loop. We&rsquo;ve put the <code>OrbitControls</code> for the camera into the scene. You don&rsquo;t have to use what we&rsquo;ve put there (you can take out things if you want to put in better stuff - especially for the ground and lighting). However, please include <code>OrbitControls</code> in your result.</p>
+<p><strong>This part of the assignment does not use the framework code (described in the later pages).</strong> Please build everything using THREE.js &ldquo;from scratch&rdquo; (using the starter code). In other parts of this workbook, we&rsquo;ll introduce you to some framework code that should help in making bigger projects.</p>
+<p>We will reward exceptional projects with advanced points. From the last quadcopter assignment, we saw that people can be very creative. We will reward cool stuff (after you show the basics). It is more important to have spinning propellers on flying aircraft than fancier things.</p>
+<ol>
+<li>Have interesting aircraft, potentially with multiple types. This means more than just finding a shape and loading it from a file (although loading geometry is allowed).</li>
+<li>Have the aircraft have interesting behaviors. One has to fly in a circle. Others can fly in more complex patterns. For example, have a quadcopter that takes off, picks a random place to fly to, turns to face that direction, flies in that direction and lands when it gets to its destination. You could give it a spotlight that shines at its destination so we know where it&rsquo;s going.</li>
+</ol>
+
+    </div>
+</details>
+
+<a href="../../docs/3/" class="Next__Page">Next: Amusement Park Rides </a>
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 2: 3D Graphics</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 2: 3D Graphics)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: Snowman </a></li>
+        <li class="Side__Item Side__Selected"> 2: Articulated Flying Thing and Radar </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Amusement Park Rides </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Construction Equipment </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Buildings </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/6/">6: Vehicle (and Shiny Thing) </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/7/">7: Real Object </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/8/">8: Dynamic Environment Map </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/9/">9: Student&#39;s Choice </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>

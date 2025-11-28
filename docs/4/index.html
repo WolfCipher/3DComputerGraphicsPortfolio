@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 4: Construction Equipment</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix"><h2 id="make-2-pieces-of-construction-equipment">Make 2 Pieces of Construction Equipment</h2>
+<iframe
+    title="07-09-01"
+    src="../../for_students/07-09-01.html"
+    class="includebox includebox-standard"
+    width="100%"
+    height="100%"
+    scrolling="no"
+    frameborder="0"
+></iframe>
+
+<div width="500px" style="border: 1px solid black; padding: 10px; margin: 10px; border-radius:10px;background-color: #f0f0f0;">
+    <p>
+        I made a forklift and a bulldozer.
+    </p>
+    <p>
+        The ground is colored with a texture I found online.
+    </p>
+    <p>
+        Attributions:
+    </p>
+    <p>
+        Stone Texture: https://pixabay.com/photos/stones-rocks-rubble-3109893/
+    </p>
+</div>
+<p>The files are 
+    
+    <a href="../../for_students/07-09-01.js" class="for_students for_students--notfile">07-09-01.js</a> 
+     
+     <a href="../../for_students/07-09-01.html" class="for_students for_students--notfile">07-09-01.html</a></p>
+<h2 id="requirements">Requirements</h2>
+<p>Make two pieces of construction equipment, with the articulations controlled by sliders. The software framework makes connecting sliders to objects easy. Include two pieces of construction equipment that are not the examples we gave you.</p>
+<p>You have done this on page 9 of Workbook 7.</p>
+
+
+<details class="myexpand" >
+    <summary class="myexpand-head">Original Instructions from Workbook 7 Page 9</summary>
+    <div class="markdown-inner myexpand-content">
+      <p>Over the next few weeks, we&rsquo;ll build up Graphics Town. So, to start with, we&rsquo;ll need to get some construction equipment to start building.</p>
+<p>In terms of real learning goals, construction equipment is often great examples of articulated objects - they consist of pieces that rotate or translate relative to each other. Things like dump trucks, excavators, cranes, cement mixers, pile drivers, etc. Also, this will let you try out more of the framework code, in particular the automatic creation of UIs for object parameters.</p>
+<p>If you&rsquo;re curious, this is a simplified version of the <a href="https://graphics.cs.wisc.edu/Courses/559-f2008/posts/assignments-constructionsite/" target="_blank">2008 Construction Site</a>, when they were building WID and Union South. The <a href="https://graphics.cs.wisc.edu/Courses/559-f2008/posts/assignments-excavator/" target="_blank">2008 Excavator</a> was a bit nicer than the one given in the sample here. Now, we see similar machines building the new Computer Sciences building, so the assignment is timely again.</p>
+<p>We&rsquo;ve started out with two examples: a tower crane and an excavator. If you look at the construction site at the bottom of the page you can see we&rsquo;ve given two example machines. For both, the AutoUI creates sliders to control them. Notice how each machine has parameters (and therefore sliders) for position and orientation, but also for its articulations.</p>
+<p>You need to create some more machine types. Here is a list of ideas to help you get started:</p>
+<ul>
+<li>Tower Crane</li>
+<li>Truck Crane</li>
+<li>Telescoping Truck Crane</li>
+<li>Excavator (see <a href="https://graphics.cs.wisc.edu/Courses/559-f2008/posts/assignments-excavator/" target="_blank">2008 Excavator</a>)</li>
+<li>Mini-Loader</li>
+<li>Fork-Lift</li>
+<li>Fork-Lift Crane</li>
+<li>Bulldozer</li>
+<li>Front-End Loader</li>
+<li>Dump Truck</li>
+<li>Cement Mixer</li>
+<li>Back-hoe</li>
+<li>Garbage Truck</li>
+<li>Concrete Pumper (<a href="http://www.potratzsouth.com/" target="_blank">Potratz</a> or <a href="http://gordysconcretepumping.com/" target="_blank">Gordy's</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Pile_driver" target="_blank">Pile Driver</a></li>
+</ul>
+<p>There are examples of a crane and an excavator in <code>07-09-constructionobjects.js</code>. Both have multiple degrees of freedom (2 for the crane, 4 for the excavator - we don&rsquo;t count the overall position and orientation).</p>
+<p>The requirement is that you must create <strong>two</strong> new types of construction equipment and place them into the world. Each machine needs to have <strong>at least 1 degree of freedom beyond its position and orientation</strong> in the world. So, for example, you could make a dump truck and a fork-lift (each one degree of freedom). You can get advanced points for more degrees of freedom.</p>
+<p>The two machines should be different: don&rsquo;t make two variants of a dump truck. If you make another tower crane or excavator, they should be sufficiently different from the ones we&rsquo;ve given you.</p>
+<p>You can make the machines with rough geometry - build them out of boxes and cylinders. Or you can try to make nicer shapes. The most important thing is their behaviors: that you can control their articulations. The machines should be &ldquo;good enough&rdquo; that someone can tell what they are (give them a descriptive name too). You can get advanced points for nicer shapes. We will also give you a point for using colors/materials appropriately (the machines shouldn&rsquo;t be all the same color).</p>
+<p>Remember: the key here is to make things that are articulated. There should be multiple (rigid) pieces that translate and rotate relative to each other (controlled by parameters that can be connected to the sliders).</p>
+<p>You will need to create new classes of objects for your new machine types. You can refer to the examples we have provided.</p>
+<p>Note that in this exercise, you will be using the <code>update</code> method of the objects you define so they can be controlled by sliders. You will also have to define the parameters in the constructor, and include the call for <code>AutoUI</code> in the world setup function.</p>
+<p>As on previous pages, you can load geometry.</p>
+<p>You can earn advanced points for making an additional machine, for making nicer shapes, for using colors/materials well, and for having more than the minimum degrees of freedom. And possibly for doing something cool that we didn&rsquo;t think of.</p>
+
+    </div>
+</details>
+
+<a href="../../docs/5/" class="Next__Page">Next: Buildings </a>
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 2: 3D Graphics</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 2: 3D Graphics)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: Snowman </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: Articulated Flying Thing and Radar </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Amusement Park Rides </a></li>
+        <li class="Side__Item Side__Selected"> 4: Construction Equipment </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Buildings </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/6/">6: Vehicle (and Shiny Thing) </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/7/">7: Real Object </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/8/">8: Dynamic Environment Map </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/9/">9: Student&#39;s Choice </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>

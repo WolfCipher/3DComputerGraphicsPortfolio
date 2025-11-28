@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 5: Buildings</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix"><h2 id="make-two-buildings-with-textures">Make Two Buildings, with Textures</h2>
+<iframe
+    title="08-06-01"
+    src="../../for_students/08-06-01.html"
+    class="includebox includebox-standard"
+    width="100%"
+    height="100%"
+    scrolling="no"
+    frameborder="0"
+></iframe>
+
+<div width="500px" style="border: 1px solid black; padding: 10px; margin: 10px; border-radius:10px;background-color: #f0f0f0;">
+    <p>
+        Press the key 'b' to switch between the regular OrbitControls camera and the bird's eye view camera that follows a bird's flight path.
+    </p>
+    <p>
+        I made a house out of 6 BufferGeometries (front, back, 2 house sides, 2 roof sides).
+        I applied 4 different textures. The sides of the house have the same texture, and the roof sides have the same texture.
+        The front of the house has its own texture, while the back of the house has a texture made by photoshopping the texture of the sides on top of the texture of the front.
+        Similarly, when applying bump mapping to all sides of the house, I needed to photoshop the texture for the front and the texture for the back to make better bump maps,
+        but the rest of the house just reused the same texture from color mapping.
+    </p>
+    <p>
+        I made a gazebo whose roof is made out of a BufferGeoemtry instead of a cone so that I could make the underside not flat.
+        I applied a tile texture to the roof of the gazebo as its color and bump map.
+        I also applied a wood texture to the white base of the gazebo as its bump map.
+    </p>
+    <p>
+        Hanging in the gazebo is a disco ball, which is a reflective sphere with environment mapping and normal mapping applied.
+    </p> 
+    <p>
+        I made the textures for the trunk and leaves of the tree myself, using the Paint app.
+    </p>
+    <p>
+        I also added two light sources, an ambient light and a direction light, that emit pale reddish light.
+        I chose reddish light because the direction light comes at a more horizontal direction, mimicking the sun during the sunset,
+        and so reddish light would be more prevalent in the sky.
+    </p>
+    <p>
+        Attributions:
+    </p>
+    <p>
+        Tudor House Front/Back Texture: https://www.decoraid.com/blog/home-exterior-ideas/
+    </p>
+    <p>
+        Tudor House Side/Back Texture: https://wallpapers.com/picture/white-wall-pictures-rhfol2scdvughi2z.html
+    </p>
+    <p>
+        Tudor House Red Roof Texture: https://pixabay.com/photos/roof-panels-roof-tiles-red-wall-550503/
+    </p>
+    <p>
+        Gazebo Blue Roof Texture: https://www.flickr.com/photos/x1brett/6999428537/in/photostream/
+    </p>
+    <p>
+        Gazebo Wood Texture: https://filtergrade.com/free-wood-grain-textures/
+    </p>
+    <p>
+        Disco Texture: https://pixabay.com/vectors/cube-hexagon-pattern-yellow-blue-4735155/ 
+    </p>
+</div>
+<p>The files are 
+    
+    <a href="../../for_students/08-06-01.js" class="for_students for_students--notfile">08-06-01.js</a> and 
+    
+    <a href="../../for_students/08-06-01.html" class="for_students for_students--notfile">08-06-01.html</a></p>
+<h2 id="requirements">Requirements</h2>
+<p>Make two buildings. They need to have textures.</p>
+<p>For at least one of the buildings, you need to define the mesh yourself in code. The other mesh you can load in. Both need to have textures.</p>
+<p>If you load a model of the building that you got from someplace else, you need to make your own texture.</p>
+<p>The original assignment required you to make a plant. That is optional for the portfolio.</p>
+<p>
+
+<details class="myexpand" >
+    <summary class="myexpand-head">Original Instructions from Workbook 8 Page 6</summary>
+    <div class="markdown-inner myexpand-content">
+      <p>(parts removed - see the workbook if you don&rsquo;t remember)</p>
+<p>The pedagogical goals of this exercise are to give you practice defining shapes with meshes and adding textures to them.</p>
+<p>In the coming weeks, you will make Graphics Town. To start, in this exercise you will make a few kinds of buildings to put into your town. Over the next weeks, you&rsquo;ll make more stuff to go into the town.</p>
+<p>For this assignment, you need to make at least two different kinds of buildings. The buildings must have shapes that are more complicated than a box (or other single primitive), and must have textures.</p>
+<p>Description of the circa 2000 graphics town, and <a href="https://www.roofingcalc.com/top-20-roof-types/" target="_blank">roof types</a>.</p>
+<p>For the requirements, you need to make two different building types. The two buildings must have different shapes (so the gable roof houses above are a single shape). The buildings must have doors and windows (or other features), and must use at least one texture. If you need ideas, <a href="https://www.roofingcalc.com/top-20-roof-types/" target="_blank">this page about roofs</a> shows a bunch of different types.</p>
+<p>You can choose what kinds of buildings to make. You can make houses, stores, schools, office buildings, castles, forts, igloos, &hellip; (we&rsquo;re open to what qualifies as a &ldquo;building&rdquo;). A building must be more than a single primitive shape (so no boxes - even if you want to make a modernist skyscraper).</p>
+<p>Remember: be sure to add your textures to the repository so they get pushed to GitHub!</p>
+<p>For this assignment, it is legal to load an OBJ (or other file that THREE supports). However, you may not just find a building on web. You must create the model yourself. At least one of your buildings must have a shape that is more than just loading a model from a file (such as defining Geometry in the code, or putting multiple pieces together). If you find a building on the web, you must make your own texture for it. And don&rsquo;t forget to include any geometry files (OBJ) in the repository that gets pushed to GitHub!</p>
+<p>If you find a building that has a texture on the web, you will be able to use it in a later assignment. But for this assignment, we want you to try to make things yourself.</p>
+<p>Please do not use fancy THREE/WebGL features that we have not yet discussed in class. The only kind of map you can use is a &ldquo;color map&rdquo; (the <code>map</code> for a THREE <code>MeshStandardMaterial</code>). You&rsquo;ll get a chance to use fancier kinds of maps soon enough.</p>
+<p>This assignment is a good opportunity to get advanced points. You can do this in a number of ways:</p>
+<ol>
+<li>Make more than two different types of buildings.</li>
+<li>Make fancier and more complex shapes.</li>
+<li>Use more interesting textures. For example, you might make a store with signs, or a movie theater with movie posters, or &hellip;</li>
+</ol>
+<p>You will define your buildings as new classes of objects within the 559 Framework. This way, your buildings will be useful in the future when you make your town. For now, we&rsquo;ve given you a simple empty world to place some buildings in. You may need to make the ground plane bigger (this is a parameter to the <code>GrWorld</code> constructor, the camera should adjust appropriately). You will put your buildings into the files. You will need to use the correct module loading mechanisms to define your classes in - learning these module aspects (import and export) is part of the assignment.</p>
+<p><del>You must also make at least one type of tree/plant as an object type. It can be simple (a cylinder and cone for a pine tree). Or you can do something fancier.</del></p>
+<p>Be sure to put at least one of each kind of object you created into the world so we&rsquo;ll see it when we run and explain how you made each building.</p>
+
+    </div>
+</details>
+
+<a href="../../docs/6/" class="Next__Page">Next: Vehicle (and Shiny Thing) </a></p>
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 2: 3D Graphics</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 2: 3D Graphics)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: Snowman </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: Articulated Flying Thing and Radar </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Amusement Park Rides </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Construction Equipment </a></li>
+        <li class="Side__Item Side__Selected"> 5: Buildings </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/6/">6: Vehicle (and Shiny Thing) </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/7/">7: Real Object </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/8/">8: Dynamic Environment Map </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/9/">9: Student&#39;s Choice </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>

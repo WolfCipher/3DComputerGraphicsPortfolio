@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 6: Vehicle (and Shiny Thing)</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix"><h2 id="make-a-vehicle-that-has-shiny-parts">Make a Vehicle that has Shiny Parts</h2>
+<iframe
+    title="08-07-01"
+    src="../../for_students/08-07-01.html"
+    class="includebox includebox-standard"
+    width="100%"
+    height="100%"
+    scrolling="no"
+    frameborder="0"
+></iframe>
+
+<div width="500px" style="border: 1px solid black; padding: 10px; margin: 10px; border-radius:10px;background-color: #f0f0f0;">
+    <p>
+        I made a wagon that moves in a circle. Its wheels rotate with its movement, 
+        and it has two reflective objects: the decorative feature on the front of the wagon and the box holding the axles.
+    </p>
+    <p>
+        I also applied a wood texture to the wagon and an environment map (see attributions).
+    </p>
+    <p>
+        There is also a gazing globe that reflects the wagon.
+    </p>
+    <p>
+        There are two cameras. Use 'c' to switch between them. The default camera has OrbitControls.
+        The second camera, which follows the reflective decoration at the front of the wagon, makes it easier to view the reflection.
+        (It's mostly there to help with grading and to add a neat camera trick.)
+    </p>
+    <p>
+        Attributions:
+    </p>
+    <p>
+        Wood Texture: https://filtergrade.com/free-wood-grain-textures/
+    </p>
+    <p>
+        Environment Map: https://polyhaven.com/a/arboretum
+    </p>
+</div>
+<p>The files are 
+    
+    <a href="../../for_students/08-07-01.js" class="for_students for_students--notfile">08-07-01.js</a> and 
+    
+    <a href="../../for_students/08-07-01.html" class="for_students for_students--notfile">08-07-01.html</a></p>
+<h2 id="requirements">Requirements</h2>
+<p>There needs to be a vehicle, with texture. Part of it must be reflective and show the surrounding environment. You need to have a skybox with the environment.</p>
+<p>Ideally, the vehicle that has parts that are shiny (and create the reflections with an environment map, and use a skybox to show the environment). Ideally, you would control the shininess with a material map, but you could also just make different materials for different parts of the vehicle. Or have separate shiny and non-shiny objects (not as good).</p>
+<p>You can make multiple vehicles.</p>
+<p>It&rsquo;s OK to load a vehicle in from a file. But if you do, please &ldquo;add value&rdquo; to what you&rsquo;ve found (for example, add a material property map that makes some parts reflective). And remember - for all your &ldquo;found objects&rdquo; you need to tell us where you got it, and be confident that it is legal.</p>
+<p>This exercise is a combination of Workbook 8 Page 7, and Workbook 9 Page 5.</p>
+
+
+<details class="myexpand" >
+    <summary class="myexpand-head">Workbook 8 Page 7 Instructions</summary>
+    <div class="markdown-inner myexpand-content">
+      <p>The pedagogical goals of this exercise are to give you practice defining shapes with meshes and adding textures to them.</p>
+<p>In graphics town, you will need vehicles. Cars, trucks, trains, or maybe other things.</p>
+<p>So in this page, please make one. It has to have wheels on the ground. But other than that, few restrictions - you can have a primitive (like a box or something) for the body. The vehicle must either have shape or texture to make it look like a car/truck/train.</p>
+<p>Here are some simple ones from that 2000 graphics town I mentioned. You should be able to make something nicer.</p>
+<p>If you want a simple train made out of primitives, you can look at <a href="https://discoverthreejs.com/book/first-steps/built-in-geometries/" target="_blank">the threejs built-in geometry tutorial (with train)</a> for a simple train made out of primitives. If you use it, be sure to give attribution (and put it into the graphics town framework).</p>
+<p>To get the points for this page, you just have to have a simple car (defined as a <code>GrObject</code>) and placed into the world. Of course, it can be a fancier vehicle. Don&rsquo;t worry about making it drive around (that&rsquo;s a future workbook).</p>
+<p>You will need vehicles for the future assignments, so effort you put into making nice vehicles now will pay off in future workbooks. You can make more vehicle types later - but you may want to do some of the work now.</p>
+<p>Please do not re-use one of the pieces of construction equipment you made for the previous workbook (page).</p>
+
+    </div>
+</details>
+
+
+
+<details class="myexpand" >
+    <summary class="myexpand-head">Workbook 9 Page 5 Instructions</summary>
+    <div class="markdown-inner myexpand-content">
+      <p>Put an environment mapped object into the scene. Pick an object that is appropriate for environment mapping (a primitive like a sphere or torus is fine). Find an environment map, or paint one yourself. Be sure to put the images into the repo!</p>
+<p>Note: your object will &ldquo;reflect&rdquo; what is in the environment map, not what is in the scene (we&rsquo;ll deal with this later). That&rsquo;s OK for this exercise, but it may look silly to have the green ground plane not reflected in the object (so the bottom of the object won&rsquo;t be green). You can just remove the ground plane (<code>GrWorld</code> has that option). Even better, paint your textures so the bottom has the green in it, so objects look as if they are properly reflecting the ground plane.</p>
+<p>You will want to make the background (skybox) be the environment map - otherwise, it will look like the object is reflecting the wrong thing.</p>
+
+    </div>
+</details>
+
+<a href="../../docs/7/" class="Next__Page">Next: Real Object </a>
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 2: 3D Graphics</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 2: 3D Graphics)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: Snowman </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: Articulated Flying Thing and Radar </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Amusement Park Rides </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Construction Equipment </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Buildings </a></li>
+        <li class="Side__Item Side__Selected"> 6: Vehicle (and Shiny Thing) </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/7/">7: Real Object </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/8/">8: Dynamic Environment Map </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/9/">9: Student&#39;s Choice </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>

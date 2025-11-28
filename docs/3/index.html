@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 3: Amusement Park Rides</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix"><h1 id="make-at-least-two-articulated-amusement-rides">Make (at least) two articulated amusement rides</h1>
+<iframe
+    title="07-08-01"
+    src="../../for_students/07-08-01.html"
+    class="includebox includebox-standard"
+    width="100%"
+    height="100%"
+    scrolling="no"
+    frameborder="0"
+></iframe>
+
+<div width="500px" style="border: 1px solid black; padding: 10px; margin: 10px; border-radius:10px;background-color: #f0f0f0;">
+    <p>
+        I made a carousel with two different mount shapes that I got online. 
+        I also added varying colors to the mounts. 
+        Additionally, half of the horses move in sync with each other and the other half moves in sync with each other.
+        These changes were meant to mimic real-life carousels, which have different color and mount options and have mounts that are not all in sync with each other.
+    </p>
+
+    <p>
+        I made a flying swing ride with two different rotations.
+        There is the rotation around the y axis that moves the seats around in a circle.
+        The other rotation rocks the seats back and forth.
+    </p>
+
+    <p>
+        I also made a tire swing. There is a wood texture I got from online applied to its frame.
+        I made the tire texture that is used for the tire's normal map in Paint.
+    <p>
+        Attributions:
+    </p>
+    <p>
+        Galloping Horse Object: https://free3d.com/3d-model/arabian-horse-galloping-v2--12079.html
+    </p>
+    <p>
+        Trotting Horse Object: https://free3d.com/3d-model/morgan-horse-galloping-v1--875431.html
+    </p>
+    <p>
+        Wood Texture: https://filtergrade.com/free-wood-grain-textures/
+    </p>
+</div>
+<p>The files are 
+    
+    <a href="../../for_students/07-08-01.js" class="for_students for_students--notfile">07-08-01.js</a> 
+     
+     <a href="../../for_students/07-08-01.html" class="for_students for_students--notfile">07-08-01.html</a></p>
+<h2 id="requirements">Requirements</h2>
+<p>Make at least two (different) animated amusement park rides (as you did on Workbook 7 page 8). You can include your carousel (or the one you worked on in class as a group), and (at least) one other one. They must be animated and show that you can create animation using the class framework. You should not include the sample objects, or examples from the sample solution.</p>
+<p>Note: the original assignment was slightly different. It had you modify our basic park (to learn the framework), and asked you to make &ldquo;something appropriate for a park&rdquo;. Here, we are asking you to do something more specific: make amusement park rides. One you&rsquo;ve done (at least) one already (the carousel).</p>
+<p>Only include the objects that you made on this page.</p>
+
+
+<details class="myexpand" >
+    <summary class="myexpand-head">Instructions for Workbook 7 page 8</summary>
+    <div class="markdown-inner myexpand-content">
+      <p>Over the next few weeks, we&rsquo;ll build Graphics Town. But to start, we&rsquo;ll begin with something less ambitious: a park. We&rsquo;ll add some &ldquo;rides&rdquo; to the park to make it more like an Amusement Park than just a playground.</p>
+<p>You can see the beginnings of a park. The code is located in three files:</p>
+<ul>
+<li><code>07-08-01.js</code> makes the park: it makes the world and places the playground equipment into it;</li>
+<li><code>07-08-simplepark.js</code> defines a simple example of an animated object;</li>
+<li><code>07-08-parkobjects.js</code> &gt;}} defines the more complex animated objects.</li>
+</ul>
+<p>You should look over all the files.</p>
+<p>Here are the required things to do. We recommend doing them in order to learn how the code works:</p>
+<ol>
+<li>
+<p>Look at the simplest example (the bouncing cube), make sure you understand it, and then <strong>take it out</strong> of the main setup since it is distracting and really has no place in a park.</p>
+</li>
+<li>
+<p>The file 07-08-parkobjects.js has a bunch of playground toys defined in it. Some of these are already placed in the world. Make sure you understand these examples as well. Also, you should place some new ones in the world.</p>
+<p>Right now, there are two &ldquo;roundabouts&rdquo; (a playground toy that spins around - sometimes these are called &ldquo;orbiters&rdquo; or &ldquo;spinners&rdquo; or &ldquo;spinning wheel&rdquo; - see <a href="https://en.wikipedia.org/wiki/Roundabout_%28play%29" target="_blank">Roundabout</a>). There is a simple one and a fancy one. These are good examples to understand.</p>
+<p>The same file also defines some other objects (a swing and a carousel). <strong>Place at least one more swing set and one carousel in the park.</strong> This will give you a chance to see how we place objects in the world using the framework. Note that this does <em>not require</em> you to change the objects (class definitions), but it does require you to edit the world setup function.</p>
+<p>When you add objects, you will need to make sure that appropriate <code>import</code> statements are included in the file. You should also make sure that you position the different playground toys so they have some space between them.</p>
+</li>
+<li>
+<p>We have started to make a &ldquo;Carousel&rdquo; or &ldquo;Merry-go-Round.&rdquo; While the Wikipedia page says these can be like the &ldquo;roundabout&rdquo; above, what we really intended was an amusement park &ldquo;merry go round&rdquo; where horses (or other things you sit on) go up and down while the ride spins. There was a famous one at <a href="https://isthmus.com/news/news/epic-buys-carousel-from-ellas-deli/" target="_blank">Ella's Deli</a> on the east side, until it closed. We&rsquo;d like you to expand the spinning thing we started to be more like one of these. You need to place <strong>&ldquo;horses&rdquo;</strong> on the poles. You can use simple geometry for the horses (a cube or other primitive), but there needs to be <strong>one on each pole</strong>, and it needs to <strong>go up and down</strong> as the merry-go-round spins. Note: the pole can go right through the object. This will require you to edit the constructor and <code>stepWorld</code> function for the <code>Carousel</code> class.</p>
+</li>
+<li>
+<p>Make your own object and put it into the scene. Preferably something that is appropriate for a park. It can be simple, but we want to see that you can create a new class of object that moves. Maybe a bird flying in the sky, or a tree that waves in the wind, or a child riding a bicycle on a path.</p>
+</li>
+</ol>
+<p>These are the three simple changes (remove the bouncing cube, add another swing, and animate the merry-go-round) and one less-simple change (new object type). But in the process, you&rsquo;ll get to see the framework code and get some practice making and animating a hierarchical object using THREE.JS (and our framework).</p>
+<p>For advanced points, you can do better than the minimums. Note that each of these can only get you a few points - doing the basic stuff is far more important.</p>
+<ol>
+<li>
+<p>Make the merry-go-round have nice geometry (like horses and other animals, or something else). You can add more poles if you need to.</p>
+</li>
+<li>
+<p>Make more amusement park rides that have hierarchical motion. Things like tilt-a-whirls, spinning teacups, or (well, I don&rsquo;t know the names for these things). See the &ldquo;flat rides&rdquo; on <a href="https://www.tripsavvy.com/types-of-theme-park-attractions-4110823" target="_blank">Trip Savvy</a> for names, or a Google image search for &ldquo;spinning amusement park ride&rdquo; turns up lots of things. It is more important that the rides have hierarchical motion than they have detailed geometry. Your ride must be animated and have hierarchical motion.</p>
+<p>This extra ride is in addition to what you had to make for the basic points (the object that you made for 4 above cannot count for both basic and advanced points). You may make up to two rides.</p>
+</li>
+</ol>
+<p>Everything you do for this exercise should be in the files. Make sure that they show up properly in the view below on the page!</p>
+<p>As with the quadcopter exercise, you may add object files subject to the same rules: Explain where they come from in the text file below, use legal ones, avoid huge ones, avoid features not discussed in class yet.</p>
+
+    </div>
+</details>
+
+<a href="../../docs/4/" class="Next__Page">Next: Construction Equipment </a>
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 2: 3D Graphics</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 2: 3D Graphics)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: Snowman </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: Articulated Flying Thing and Radar </a></li>
+        <li class="Side__Item Side__Selected"> 3: Amusement Park Rides </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Construction Equipment </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Buildings </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/6/">6: Vehicle (and Shiny Thing) </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/7/">7: Real Object </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/8/">8: Dynamic Environment Map </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/9/">9: Student&#39;s Choice </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>
